@@ -557,34 +557,14 @@ function generateCarLaneMetadata() {
 
   const occupiedTiles = new Set();
 
-  const vehicles = Array.from({ length: 3 }, () => {
-    let initialTileIndex;
-    do {
-      initialTileIndex = THREE.MathUtils.randInt(minTileIndex, maxTileIndex);
-    } while (occupiedTiles.has(initialTileIndex));
-    occupiedTiles.add(initialTileIndex - 1);
-    occupiedTiles.add(initialTileIndex);
-    occupiedTiles.add(initialTileIndex + 1);
-
-    const color = randomElement([0xa52523, 0xbdb638, 0x78b14b]);
-
-    return { initialTileIndex, color };
-  });
-
-  return { type: "car", direction, speed, vehicles };
-}
-
-function generateTruckLaneMetadata() {
-  const direction = randomElement([true, false]);
-  const speed = randomElement([125, 156, 188]);
-
-  const occupiedTiles = new Set();
-
+  // Reduced cars from 3 → 2 and increased spacing
   const vehicles = Array.from({ length: 2 }, () => {
     let initialTileIndex;
     do {
       initialTileIndex = THREE.MathUtils.randInt(minTileIndex, maxTileIndex);
     } while (occupiedTiles.has(initialTileIndex));
+
+    // Increased spacing between cars
     occupiedTiles.add(initialTileIndex - 2);
     occupiedTiles.add(initialTileIndex - 1);
     occupiedTiles.add(initialTileIndex);
@@ -592,12 +572,42 @@ function generateTruckLaneMetadata() {
     occupiedTiles.add(initialTileIndex + 2);
 
     const color = randomElement([0xa52523, 0xbdb638, 0x78b14b]);
+    return { initialTileIndex, color };
+  });
 
+  return { type: "car", direction, speed, vehicles };
+}
+
+
+function generateTruckLaneMetadata() {
+  const direction = randomElement([true, false]);
+  const speed = randomElement([125, 156, 188]);
+
+  const occupiedTiles = new Set();
+
+  // Reduced trucks from 2 → 1 and increased spacing
+  const vehicles = Array.from({ length: 1 }, () => {
+    let initialTileIndex;
+    do {
+      initialTileIndex = THREE.MathUtils.randInt(minTileIndex, maxTileIndex);
+    } while (occupiedTiles.has(initialTileIndex));
+
+    // Increased spacing between trucks
+    occupiedTiles.add(initialTileIndex - 3);
+    occupiedTiles.add(initialTileIndex - 2);
+    occupiedTiles.add(initialTileIndex - 1);
+    occupiedTiles.add(initialTileIndex);
+    occupiedTiles.add(initialTileIndex + 1);
+    occupiedTiles.add(initialTileIndex + 2);
+    occupiedTiles.add(initialTileIndex + 3);
+
+    const color = randomElement([0xa52523, 0xbdb638, 0x78b14b]);
     return { initialTileIndex, color };
   });
 
   return { type: "truck", direction, speed, vehicles };
 }
+
 
 const moveClock = new THREE.Clock(false);
 
