@@ -39,6 +39,7 @@ Chicken Crossy is a 3D arcade-style game where you guide a chicken across roads,
  ├── script.js      # Game logic and animations
 
 💡 Features
+
 Dynamic terrain and obstacle generation
 
 Smooth movement animations
@@ -58,7 +59,9 @@ CSS3
 JavaScript
 
 📜 License
+
 This project is licensed under the MIT License – feel free to use, modify, and share it.
 
 🙌 Acknowledgements
+
 Inspired by the classic game Crossy Road.
