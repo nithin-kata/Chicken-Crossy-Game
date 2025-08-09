@@ -50,6 +50,7 @@ Collision detection and score tracking
 Simple retry mechanism for instant restarts
 
 🛠️ Built With
+
 HTML5
 
 CSS3
