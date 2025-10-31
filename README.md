@@ -65,3 +65,5 @@ This project is licensed under the MIT License – feel free to use, modify, and
 🙌 Acknowledgements
 
 Inspired by the classic game Crossy Road.
+
+Play here :- https://chicken-crossy-game-nithin.netlify.app/
