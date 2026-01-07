@@ -29,7 +29,7 @@ Chicken Crossy is a 3D arcade-style game where you guide a chicken across roads,
 ---
 
 ## 🚀 How to Run
-**1. Clone this repository:**
+1. Clone this repository:
    ```bash
    git clone https://github.com/nithin-kata/Chicken-Crossy-Game.git
 
