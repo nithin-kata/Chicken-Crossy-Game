@@ -2,6 +2,9 @@
 
 Chicken Crossy is a 3D arcade-style game where you guide a chicken across roads, forests, and traffic while avoiding obstacles. It features smooth animations, dynamic map generation, vehicle movement, collision detection, and supports both keyboard and on-screen controls. Built using **HTML5**, **CSS3**, and **JavaScript**.
 
+
+<img width="1919" height="875" alt="image" src="https://github.com/user-attachments/assets/f0e8ae1a-78ea-472a-b708-23607d822169" />
+
 ---
 
 ## 🎮 Gameplay
